@@ -4,7 +4,7 @@
   "description": "Github Mobile uses the Github API in order to present Github info to the user in an user-friendly way.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm install"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/adrianmorente/PracticasIV/issues"
   },
-  "homepage": "https://github.com/adrianmorente/PracticasIV#readme"
+  "homepage": "https://github.com/adrianmorente/PracticasIV#readme",
+  "devDependencies": {
+    "jshint": "^2.9.5"
+  }
 }
