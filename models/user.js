@@ -7,7 +7,7 @@ var User = {
     type: String,
     required: true
   },
-  gh-username: {
+  gh_user: {
     type: String,
     required: true
   }
