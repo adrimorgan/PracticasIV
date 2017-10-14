@@ -41,19 +41,10 @@ Lo instalaremos con `npm install --save-dev mocha` de forma local al proyecto, c
 
 ```js
 "scripts": {
-  "start": "node server.js";
   "test": "mocha"
 },
 ```
 
-* Por el momento, el archivo de inicio ***server.js*** tendrá una configuración temporal, aunque finalmente será el que integre toda la conexión con base de datos, etc.
-
 ![Captura test Mocha](./images/captura-test-mocha.png)
 
-Mocha nos provee de soporte para tests asíncronos y opciones para realizar *hooks* antes y/o después de cada build. Además, nos permite usar cualquier librería de aserciones.
-
-#### Chai, una *Assertion Library* compatible con Mocha
-
-Mientras que Mocha nos facilita un entorno de tests unitarios, Chai nos ayudará a gestionar (*testear*, mejor dicho) en un futuro las solicitudes y entradas HTTP que reciba nuestra API.
-
-Para instalar esta dependencia, bastará con ejecutar `npm install --save-dev chai chai-http`.
+Mocha nos provee de soporte para tests asíncronos y opciones para realizar *hooks* antes y/o después de cada build. Además, nos permite usar cualquier librería de aserciones (usaremos `assert`, utilizada en los [ejercicios del tema 2](./Tema2)).
