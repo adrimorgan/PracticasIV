@@ -30,3 +30,19 @@ De esta forma, el usuario podrá llevar una vista previa de los repositorios que
 Integración continua en el repositorio.
 
 ## Trabajando con TravisCI
+
+Para poder trabajar con [Travis CI](https://travis-ci.org/) tan solo tendremos que acceder a su web, autenticarnos con nuestra cuenta de GitHub y ya tendremos acceso a todos nuestros repositorios. Desde nuestro perfil en Travis, activamos los repositorios a los que queremos aplicar integración continua y, a partir de ese momento, Travis someterá dicho repo a los tests que le indiquemos cada vez que subamos un cambio a GitHub.
+
+#### Mocha, un framework de tests para JS
+
+Lo instalaremos con `npm install --save-dev mocha` de forma local al proyecto, crearemos una carpeta *test* y añadiremos el siguiente contenido a nuestro **package.json**:
+
+```
+"scripts": {
+  "test": "mocha"
+},
+```
+
+Hecho esto, cada vez que ejecutemos **npm test**, *Mocha* realizará todos los tests incluidos en la carpeta test, mostrando (en el mejor caso) una salida del estilo:
+
+![Captura test Mocha](./images/captura-test-mocha.png)
