@@ -2,9 +2,8 @@
   "name": "github-mobile",
   "version": "1.0.0",
   "description": "Github Mobile uses the Github API in order to present Github info to the user in an user-friendly way.",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
     "test": "mocha"
   },
   "repository": {
@@ -18,8 +17,6 @@
   },
   "homepage": "https://github.com/adrianmorente/PracticasIV#readme",
   "devDependencies": {
-    "chai": "^4.1.2",
-    "chai-http": "^3.0.0",
     "jshint": "^2.9.5",
     "mocha": "^4.0.1"
   },
