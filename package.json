@@ -2,8 +2,9 @@
   "name": "github-mobile",
   "version": "1.0.0",
   "description": "Github Mobile uses the Github API in order to present Github info to the user in an user-friendly way.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "mocha"
   },
   "repository": {
@@ -21,5 +22,10 @@
     "chai-http": "^3.0.0",
     "jshint": "^2.9.5",
     "mocha": "^4.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.1"
   }
 }
