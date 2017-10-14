@@ -4,6 +4,6 @@
 
 - A continuación, instalamos el paquete `golang` (si fuera necesario, que en mi caso sí lo era); y ejecutamos el archivo de tests con el comando `go test`. La salida será la siguiente:
 
-![Captura test go](./../images/captura-test-go.png)
+![Captura test go](../../images/captura-test-go.png)
 
 - *Si se nos ocurriera algún test adicional y/o faltante, nada más que hacer un **fork** y un **pull request** al repositorio original*.
