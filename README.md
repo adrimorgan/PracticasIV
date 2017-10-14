@@ -33,16 +33,27 @@ Integración continua en el repositorio.
 
 Para poder trabajar con [Travis CI](https://travis-ci.org/) tan solo tendremos que acceder a su web, autenticarnos con nuestra cuenta de GitHub y ya tendremos acceso a todos nuestros repositorios. Desde nuestro perfil en Travis, activamos los repositorios a los que queremos aplicar integración continua y, a partir de ese momento, Travis someterá dicho repo a los tests que le indiquemos cada vez que subamos un cambio a GitHub.
 
+- **¿Por qué elegimos TravisCI?**: [la elección está difícil](https://stackshare.io/stackups/jenkins-vs-shippable-vs-travis-ci), y aunque ofrece unas características muy similares a *Jenkins*, optaremos por Travis por sencillez de uso, ya que lo hemos visto en clase (y bastantes dolores de cabeza nos dará Javascript de por sí).
+
 #### Mocha, un framework de tests para JS
 
 Lo instalaremos con `npm install --save-dev mocha` de forma local al proyecto, crearemos una carpeta *test* y añadiremos el siguiente contenido a nuestro **package.json**:
 
-```
+```js
 "scripts": {
+  "start": "node server.js";
   "test": "mocha"
 },
 ```
 
-Hecho esto, cada vez que ejecutemos **npm test**, *Mocha* realizará todos los tests incluidos en la carpeta test, mostrando (en el mejor caso) una salida del estilo:
+* Por el momento, el archivo de inicio ***server.js*** tendrá una configuración temporal, aunque finalmente será el que integre toda la conexión con base de datos, etc.
 
 ![Captura test Mocha](./images/captura-test-mocha.png)
+
+Mocha nos provee de soporte para tests asíncronos y opciones para realizar *hooks* antes y/o después de cada build. Además, nos permite usar cualquier librería de aserciones.
+
+#### Chai, una *Assertion Library* compatible con Mocha
+
+Mientras que Mocha nos facilita un entorno de tests unitarios, Chai nos ayudará a gestionar (*testear*, mejor dicho) en un futuro las solicitudes y entradas HTTP que reciba nuestra API.
+
+Para instalar esta dependencia, bastará con ejecutar `npm install --save-dev chai chai-http`.
