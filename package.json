@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/adrianmorente/PracticasIV#readme",
   "devDependencies": {
+    "docco": "^0.7.0",
+    "grunt-docco": "^0.5.0",
     "jshint": "^2.9.5",
     "mocha": "^4.0.1"
   },
