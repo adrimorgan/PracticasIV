@@ -45,6 +45,4 @@ Lo instalaremos con `npm install --save-dev mocha` de forma local al proyecto, c
 },
 ```
 
-![Captura test Mocha](./images/captura-test-mocha.png)
-
-Mocha nos provee de soporte para tests asíncronos y opciones para realizar *hooks* antes y/o después de cada build. Además, nos permite usar cualquier librería de aserciones (usaremos `assert`, utilizada en los [ejercicios del tema 2](./Tema2)).
+Mocha nos provee de soporte para tests asíncronos y opciones para realizar *hooks* antes y/o después de cada build. Además, nos permite usar cualquier librería de aserciones (usaremos `assert`, utilizada en los [ejercicios del tema 2](./Ejercicios/Tema2)).
