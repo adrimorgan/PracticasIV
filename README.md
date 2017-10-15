@@ -46,3 +46,7 @@ Lo instalaremos con `npm install --save-dev mocha` de forma local al proyecto, c
 ```
 
 Mocha nos provee de soporte para tests asíncronos y opciones para realizar *hooks* antes y/o después de cada build. Además, nos permite usar cualquier librería de aserciones (usaremos `assert`, utilizada en los [ejercicios del tema 2](./Ejercicios/Tema2)).
+
+***
+
+Añado esta línea para cerrar **vía commit** tres issues que cerré de forma incorrecta (también conocido como interfaz web de GitHub); y por lo que mi entrega no superaba los tests de integración continua del profesor.
