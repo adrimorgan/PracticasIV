@@ -49,4 +49,4 @@ Mocha nos provee de soporte para tests asíncronos y opciones para realizar *hoo
 
 ***
 
-Añado esta línea para cerrar **vía commit** tres issues que cerré de forma incorrecta (también conocido como interfaz web de GitHub); y por lo que mi entrega no superaba los tests de integración continua del profesor.
+Añado esta línea para cerrar **vía commit desde terminal** tres issues que cerré de forma incorrecta (también conocido como interfaz web de GitHub); y por lo que mi entrega no superaba los tests de integración continua del profesor.
