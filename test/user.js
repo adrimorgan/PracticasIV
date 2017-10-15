@@ -3,6 +3,7 @@ var user = require('./../models/user.js');
 var assert = require('assert');
 
 describe('User', function(){
+  
   // testing the load of the library
   describe('Load', function(){
     it('should be loaded', function(){
