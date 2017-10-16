@@ -2,7 +2,7 @@
 
 - Todo el contenido referente a este ejercicio (en cuanto a autenticación con Travis, etc.) ya se explicó en el fichero [README.md](https://github.com/adrianmorente/PracticasIV/blob/master/README.md).
 
-- Finalmente, el fichero [`.travis.yml`](https://github.com/adrianmorente/PracticasIV/.travis.yml) contiene lo siguiente:
+- Finalmente, el fichero [`.travis.yml`](https://github.com/adrianmorente/PracticasIV/blob/master/.travis.yml) contiene lo siguiente:
 
 ```yaml
 language: node_js
