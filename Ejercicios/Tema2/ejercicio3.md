@@ -1,8 +1,8 @@
 # Tema 2 - Ejercicio 3
 
-- Como indicamos en [el guión descriptivo del README.md](../README.md), instalamos `mocha` con `npm` y creamos la carpeta `test` para que la herramienta los evalúe automáticamente.
+- Como indicamos en [el guión descriptivo del README.md](https://github.com/adrianmorente/PracticasIV/blob/master/README.md), instalamos `mocha` con `npm` y creamos la carpeta `test` para que la herramienta los evalúe automáticamente.
 
-- Ahora actualizamos el código del [`ejercicio 2`](./ejercicio2.md) referente al archivo [test/user.js](../test/user.js), añadiendo a la librería `assert` la gestión de `mocha` tal y como muestra [el guión de la asignatura](http://jj.github.io/IV/documentos/temas/Desarrollo_basado_en_pruebas#desarrollo-basado-en-pruebas-1). Quedaría tal que así:
+- Ahora actualizamos el código del [`ejercicio 2`](./ejercicio2.md) referente al archivo [test/user.js](https://github.com/adrianmorente/PracticasIV/blob/master/test/user.js), añadiendo a la librería `assert` la gestión de `mocha` tal y como muestra [el guión de la asignatura](http://jj.github.io/IV/documentos/temas/Desarrollo_basado_en_pruebas#desarrollo-basado-en-pruebas-1). Quedaría tal que así:
 
 ```js
 // test/user.js
