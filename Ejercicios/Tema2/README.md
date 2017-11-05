@@ -1,4 +1,6 @@
-# Ejercicio 1
+#
+
+## Ejercicio 1
 
 - Para empezar, descargamos el repositorio de [JJ/HitosIV](https://github.com/JJ/HitosIV) que contiene los tests de ejemplo e iniciación en el lenguaje *Go*.
 
@@ -10,7 +12,7 @@
 
 ***
 
-# Ejercicio 2
+## Ejercicio 2
 
 - Para empezar con el testeo de funcionalidades de nuestra aplicación, comenzaremos por el nivel más bajo, **el de las aserciones**. Usaremos la librería estándar de JS (`assert`) tal que así:
 
@@ -65,7 +67,7 @@ console.log("Actualización de usuario completa.\n");
 
 ***
 
-# Ejercicio 3
+## Ejercicio 3
 
 - Como indicamos en [el guión descriptivo del README.md](https://github.com/adrianmorente/PracticasIV/blob/master/README.md), instalamos `mocha` con `npm` y creamos la carpeta `test` para que la herramienta los evalúe automáticamente.
 
@@ -110,7 +112,7 @@ describe('User', function(){
 
 ***
 
-# Ejercicio 7
+## Ejercicio 7
 
 #### Crear una descripción del módulo usando `package.json`
 
@@ -122,7 +124,7 @@ describe('User', function(){
 
 ***
 
-# Ejercicio 9
+## Ejercicio 9
 
 - Todo el contenido referente a este ejercicio (en cuanto a autenticación con Travis, etc.) ya se explicó en el fichero [README.md](https://github.com/adrianmorente/PracticasIV/blob/master/README.md).
 
