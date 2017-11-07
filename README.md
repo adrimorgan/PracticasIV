@@ -10,17 +10,18 @@ Repositorio dedicado a la recolección de los ejercicios realizados a lo largo d
 
 Descripción del proyecto a realizar.
 
-## GitHub Mobile
+## Dynasystem exercises
 
-A falta de una aplicación oficial de GitHub para los smartphones actuales (tanto en la *Play Store* de *Google* como la *App Store* de *Apple*; el proyecto deseado implementará una interfaz de aplicación móvil que permita a los usuarios de GitHub identificarse correctamente y acceder a una versión más limitada de sus repositorios.
+[Dynasystem](https://www.dynasystem.es/) es un dispositivo revolucionario que persigue el máximo rendimiento deportivo además de un control clínico para el deportista. Se trata de un centro de alto rendimiento que reúne las máquinas de entrenamiento más exitosas del mercado, permitiendo integrar el dispositivo en cualquier ambiente. Además de *all in one*, Dynasystem recopila datos del entrenamiento en tiempo real y los muestra en pantalla, permitiendo al deportista o al especialista clínico orientarse con el tratamiento, así como perfeccionar el rendimiento al máximo nivel.
 
-De esta forma, el usuario podrá llevar una vista previa de los repositorios que mantiene en su perfil y a los que contribuye, consultar las versiones contenidas en éstos, y si lo quisiera, descargar el contenido de dichos repositorios.
+Este proyecto versa sobre la creación y predefinición en el servidor de una serie de ejercicios preconfigurados sobre el dispositivo. Con este microservicio, Dynasystem será capaz de almacenar ejercicios predefinidos personalmente por cada usuario, eliminarlos, consultarlos o simplemente añadirlos a la rutina correspondiente.
+
+*[Este microservicio será uno de los integrantes de la aplicación final, que será mi Trabajo de Fin de Grado.]*
 
 #### Servicios y tecnologías usados
 
 + Pila **MEAN** (MongoDB, Express, Angular y NodeJS).
-+ Contenedores de **Azure** para pruebas y despliegue.
-+ **API** de **GitHub**.
++ Zeit.co y/o contenedores de **Azure** para pruebas y despliegue.
 + Integración continua con *TravisCI*.
 
 ***
@@ -46,10 +47,6 @@ Lo instalaremos con `npm install --save-dev mocha` de forma local al proyecto, c
 ```
 
 Mocha nos provee de soporte para tests asíncronos y opciones para realizar *hooks* antes y/o después de cada build. Además, nos permite usar cualquier librería de aserciones (usaremos `assert`, utilizada en los [ejercicios del tema 2](./Ejercicios/Tema2)).
-
-***
-
-Añado esta línea para cerrar **vía commit desde terminal** tres issues que cerré de forma incorrecta (también conocido como interfaz web de GitHub); y por lo que mi entrega no superaba los tests de integración continua del profesor.
 
 ***
 
