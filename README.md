@@ -52,4 +52,15 @@ Mocha nos provee de soporte para tests asíncronos y opciones para realizar *hoo
 
 # Tercer hito
 
-En construcción...
+El tercer hito consiste en utilizar *PaaS (Plataforma como servicio)* sobre las que despleguemos nuestros microservicios y/o aplicaciones de forma más o menos automática. En [los ejercicios del Tema 3](./Ejercicios/Tema3) tenemos una guía con la configuración y ejemplos seguidos para este fin.
+
+#### ¿Y qué PaaS utilizo?
+
+Podemos elegir entre Heroku y Openshift como más destacados; o también tenemos `Zeit.co` con la particularidad de que permite solamente aplicaciones de HTML estático, de NodeJS o contenedores de Docker. Por mi parte, ya que utilizo NodeJS y que me gusta probar cosas fuera del guión utilizaré éste último. Insisto, la configuración correspondiente está en los ejercicios.
+
+A modo de spoiler, cabe destacar que podremos desplegar esta aplicación sobre Zeit con su herramienta `now` de dos formas:
+
+- Sea lanzando `$ now` desde el directorio donde exista un `package.json` de proyecto.
+- O bien ejecutando `$ now adrianmorente/PracticasIV`, que buscaría el repositorio en GitHub, BitBucket y GitLab e intentaría lanzarlo.
+
+*** 
