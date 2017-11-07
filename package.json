@@ -1,7 +1,7 @@
 {
-  "name": "github-mobile",
+  "name": "dynasystem-exercises",
   "version": "1.0.0",
-  "description": "Github Mobile uses the Github API in order to present Github info to the user in an user-friendly way.",
+  "description": "Dynasystem is a sportive and rehabilitational device for the athletes. This microservice allow the user to create an exercise and save it for the record.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -26,6 +26,7 @@
     "assert": "^1.4.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "grunt": "^1.0.1",
     "mongoose": "^4.12.1"
   }
 }
