@@ -37,3 +37,9 @@ Una vez tenemos eso, basta con ejecutar `$ now` en el directorio donde esté el 
 ![ejemplo-despliegue-zeit](./images/ejemplo-despliegue-zeit.png)
 
 ***
+
+## Ejercicio 3 - Realizar una app en `express` que contenga rutas y variables
+
+
+
+***
