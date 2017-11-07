@@ -63,8 +63,6 @@ A modo de spoiler, cabe destacar que podremos desplegar esta aplicación sobre Z
 - Sea lanzando `$ now` desde el directorio donde exista un `package.json` de proyecto.
 - O bien ejecutando `$ now adrianmorente/PracticasIV`, que buscaría el repositorio en GitHub, BitBucket y GitLab e intentaría lanzarlo.
 
+Despliegue https://dynasystem-exercises-sxbxpdidie.now.sh/
+
 ***
-
-## Despliegue
-
-https://dynasystem-exercises-sxbxpdidie.now.sh/
