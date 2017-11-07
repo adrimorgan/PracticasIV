@@ -137,7 +137,7 @@ Para empezar con `now`, lo primero es identificarnos con `now login`. Basta con 
 Siguiendo la documentación de Zeit, vemos que es muy fácil hacer un despliegue de un servicio, como ya hemos hecho antes, de dos formas:
 
   - Despliegue local: desde el directorio de aplicación, donde exista un `package.json`. Esto obviamente realiza el despliegue con el código local en su última versión.
-  - Despliegue desde repositorio `git`. Ésto despliega el último código subido a este servidor. Basta con ejecutar el siguiente comando:
+  - Despliegue desde repositorio `git`. Ésto despliega el último código subido a este repositorio, el cual busca en BitBucket, GitHub y GitLab. Basta con ejecutar el siguiente comando:
 
   `$ now <usuario>/<repositorio>`
 
@@ -146,6 +146,12 @@ Siguiendo la documentación de Zeit, vemos que es muy fácil hacer un despliegue
 De una forma u otra, una vez hecho el despliegue podemos acceder a la URL aleatoriamente generada por Zeit y veríamos, seguramente, un contenido más bonito que éste:
 
 <img src="./images/show-despliegue-final-zeit.png" width="50%" alt="Show final">
+
+***
+
+## Ejercicio 7 - Despliegue automático a Heroku con Snap CI
+
+Por mi parte utilizo Zeit en lugar de Heroku; y como Zeit genera rutas aleatorias por cada despliegue (a no ser que se contrate el servicio de pago) no me es posible definir una forma automática de *autodesplegar* a Zeit con cada `push` al repositorio de Github.
 
 ***
 
