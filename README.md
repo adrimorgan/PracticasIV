@@ -65,4 +65,8 @@ A modo de spoiler, cabe destacar que podremos desplegar esta aplicación sobre Z
 
 *** 
 
+## Despliegue
+
+Realizado en Zeit.
+
 Cierro issue #6 desde commit por errores de integración...
