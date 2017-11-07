@@ -11,6 +11,14 @@ describe('Testing the correct deployment of the whole app', function(){
       .expect(200, done);
   });
 
+  // testing the 'jsonify' of all exercises in the app's array by GET
+  it('GET /exercises', fucntion(done){
+    request(app)
+      .get('/exercises')
+      .expect('Content-Type', /json/)
+      .expect(200, done);
+  })
+
   // testing the DELETE method
   it('DELETE /exercises...', function(done){
     request(app)
