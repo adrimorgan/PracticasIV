@@ -2,9 +2,10 @@
   "name": "dynasystem-exercises",
   "version": "1.0.0",
   "description": "Dynasystem is a sportive and rehabilitational device for the athletes. This microservice allow the user to create an exercise and save it for the record.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
