@@ -64,3 +64,5 @@ A modo de spoiler, cabe destacar que podremos desplegar esta aplicación sobre Z
 - O bien ejecutando `$ now adrianmorente/PracticasIV`, que buscaría el repositorio en GitHub, BitBucket y GitLab e intentaría lanzarlo.
 
 *** 
+
+Cierro issue #6 desde commit por errores de integración...
