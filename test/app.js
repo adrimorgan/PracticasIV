@@ -12,7 +12,7 @@ describe('Testing the correct deployment of the whole app', function(){
   });
 
   // testing the 'jsonify' of all exercises in the app's array by GET
-  it('GET /exercises', fucntion(done){
+  it('GET /exercises', function(done){
     request(app)
       .get('/exercises')
       .expect('Content-Type', /json/)
