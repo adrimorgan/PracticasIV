@@ -1,6 +1,7 @@
 # JS #
 ######
 node_modules/*
+docs/*
 
 # Compiled source #
 ###################
@@ -26,6 +27,7 @@ node_modules/*
 
 # Logs and databases #
 ######################
+*.db
 *.log
 *.sql
 *.sqlite
