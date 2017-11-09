@@ -3,6 +3,14 @@ var request = require('supertest'),
 
 describe('Testing the correct deployment of the whole app', function(){
 
+  // testing the correct status of the API
+  it('GET /', function(done){
+    request(app)
+      .get('/')
+      .expect('Content-Type', "text/html; charset=utf-8")
+      .expect('{ "status" : "OK" }', done);
+  });
+
   // testing the 'jsonify' of an exercise created by parameters by PUT
   it('PUT /exercise/...parameters...', function(done){
     request(app)
@@ -17,7 +25,7 @@ describe('Testing the correct deployment of the whole app', function(){
       .get('/exercises')
       .expect('Content-Type', /json/)
       .expect(200, done);
-  })
+  });
 
   // testing the DELETE method
   it('DELETE /exercises...', function(done){
