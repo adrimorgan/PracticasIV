@@ -8,7 +8,8 @@ describe('Testing the correct deployment of the whole app', function(){
     request(app)
       .get('/')
       .expect('Content-Type', "text/html; charset=utf-8")
-      .expect('{ "status" : "OK" }', done);
+      .expect('{ "status" : "OK" }')
+      .expect(200, done);
   });
 
   // testing the 'jsonify' of an exercise created by parameters by PUT
