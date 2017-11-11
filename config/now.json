@@ -1,0 +1,6 @@
+{
+  "env": {
+    "MONGO_URL": "@dynasystem-mongo-url",
+    "MY_API_TOKEN": "@dynasystem-my-api-token"
+  }
+}
