@@ -1,0 +1,64 @@
+Kernel configuration not found at /proc/config.gz; searching...
+Kernel configuration found at /boot/config-4.13.12-041312-generic
+--- Namespaces ---
+Namespaces: enabled
+Utsname namespace: enabled
+Ipc namespace: enabled
+Pid namespace: enabled
+User namespace: enabled
+Network namespace: enabled
+
+--- Control groups ---
+Cgroups: enabled
+
+Cgroup v1 mount points: 
+/sys/fs/cgroup/systemd
+/sys/fs/cgroup/cpu,cpuacct
+/sys/fs/cgroup/pids
+/sys/fs/cgroup/net_cls,net_prio
+/sys/fs/cgroup/devices
+/sys/fs/cgroup/perf_event
+/sys/fs/cgroup/memory
+/sys/fs/cgroup/cpuset
+/sys/fs/cgroup/freezer
+/sys/fs/cgroup/blkio
+/sys/fs/cgroup/hugetlb
+/sys/fs/cgroup/rdma
+
+Cgroup v2 mount points: 
+/sys/fs/cgroup/unified
+
+Cgroup v1 clone_children flag: enabled
+Cgroup device: enabled
+Cgroup sched: enabled
+Cgroup cpu account: enabled
+Cgroup memory controller: enabled
+Cgroup cpuset: enabled
+
+--- Misc ---
+Veth pair device: enabled, not loaded
+Macvlan: enabled, not loaded
+Vlan: enabled, not loaded
+Bridges: enabled, loaded
+Advanced netfilter: enabled, not loaded
+CONFIG_NF_NAT_IPV4: enabled, loaded
+CONFIG_NF_NAT_IPV6: enabled, not loaded
+CONFIG_IP_NF_TARGET_MASQUERADE: enabled, loaded
+CONFIG_IP6_NF_TARGET_MASQUERADE: enabled, not loaded
+CONFIG_NETFILTER_XT_TARGET_CHECKSUM: enabled, loadedCONFIG_NETFILTER_XT_MATCH_COMMENT: enabled, not loaded
+FUSE (for use with lxcfs): enabled, not loaded
+
+--- Checkpoint/Restore ---
+checkpoint restore: enabled
+CONFIG_FHANDLE: enabled
+CONFIG_EVENTFD: enabled
+CONFIG_EPOLL: enabled
+CONFIG_UNIX_DIAG: enabled
+CONFIG_INET_DIAG: enabled
+CONFIG_PACKET_DIAG: enabled
+CONFIG_NETLINK_DIAG: enabled
+File capabilities: enabled
+
+Note : Before booting a new kernel, you can check its configuration
+usage : CONFIG=/path/to/config /usr/bin/lxc-checkconfig
+
