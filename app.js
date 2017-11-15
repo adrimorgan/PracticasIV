@@ -11,8 +11,14 @@ var exercises = new Array;
 // just a visit counter
 var visit_counter = 0;
 
-// index route, just trying that the service is running well
+// index route
 app.get('/', function(req, res){
+  res.sendFile(__dirname + '/index.html');
+  visit_counter += 1;
+});
+
+// status route, just trying that the service is running well
+app.get('/status', function(req, res){
   res.send('{ "status" : "OK" }');
   visit_counter += 1;
 });
@@ -34,7 +40,7 @@ app.get('/exercises', function(req, res){
 app.delete('/exercises', function(req, res){
   exercises = [];
   res.sendStatus(200);
-})
+});
 
 // example of route to exercise identified by name
 app.get('/exercise/:exerciseName', function(req, res){
