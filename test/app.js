@@ -3,10 +3,18 @@ var request = require('supertest'),
 
 describe('Testing the correct deployment of the whole app', function(){
 
-  // testing the correct status of the API
+  // getting main content (index page)
   it('GET /', function(done){
     request(app)
       .get('/')
+      .expect('Content-Type', "text/html; charset=UTF-8")
+      .expect(200, done);
+  })
+
+  // testing the correct status of the API
+  it('GET /status', function(done){
+    request(app)
+      .get('/status')
       .expect('Content-Type', "text/html; charset=utf-8")
       .expect('{ "status" : "OK" }')
       .expect(200, done);
