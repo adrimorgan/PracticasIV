@@ -64,7 +64,7 @@ A modo de spoiler, cabe destacar que podremos desplegar esta aplicación sobre Z
 - Sea lanzando `$ now` desde el directorio donde exista un `package.json` de proyecto.
 - O bien ejecutando `$ now adrianmorente/PracticasIV`, que buscaría el repositorio en GitHub, BitBucket y GitLab e intentaría lanzarlo.
 
-Despliegue https://dynasystemexercises-jbabdzwczk.now.sh/
+Despliegue: https://dynasystem-exercises-gvjtxnlwcp.now.sh/
 
 ***
 
@@ -72,6 +72,18 @@ Despliegue https://dynasystemexercises-jbabdzwczk.now.sh/
 
 El cuarto hito consiste en desplegar nuestras aplicaciones sobre contenedores, **Docker**, concretamente. Utilizando `now` como en el hito anterior, podemos elegir si desplegamos en Zeit a partir del archivo `package.json` o a partir del archivo [`Dockerfile`](./Dockerfile) (que escribiremos para esta parte del desarrollo).
 
+Para esta elección, elegimos el 1 en el tercer hito, y en esta ocasión utilizamos la 2ª. Una imagen de muestra la tenemos [aquí](./images/deploy-now-npm-docker.png). El resultado se desplegará en un contenedor similar al indicado a continuación:
 
+Contenedor: https://dynasystemexercises-ycbytgmupy.now.sh/
+
+Por otro lado, habremos generado una `Automated Build` enlazada con este repositorio de Github; de forma que cada vez que hagamos un `push` aquí, se actualizará el repo de Docker y se desplegará en un nuevo contenedor.
+
+Docker Hub: https://hub.docker.com/r/adrianmorente/practicasiv/
+
+Podemos descargar la imagen completa del repositorio con la orden:
+
+```bash
+docker pull adrianmorente/practicasiv
+```
 
 ***
