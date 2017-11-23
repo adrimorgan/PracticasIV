@@ -64,6 +64,14 @@ A modo de spoiler, cabe destacar que podremos desplegar esta aplicación sobre Z
 - Sea lanzando `$ now` desde el directorio donde exista un `package.json` de proyecto.
 - O bien ejecutando `$ now adrianmorente/PracticasIV`, que buscaría el repositorio en GitHub, BitBucket y GitLab e intentaría lanzarlo.
 
-Despliegue https://dynasystem-exercises-sxbxpdidie.now.sh/
+Despliegue https://dynasystemexercises-jbabdzwczk.now.sh/
+
+***
+
+# Cuarto hito
+
+El cuarto hito consiste en desplegar nuestras aplicaciones sobre contenedores, **Docker**, concretamente. Utilizando `now` como en el hito anterior, podemos elegir si desplegamos en Zeit a partir del archivo `package.json` o a partir del archivo [`Dockerfile`](./Dockerfile) (que escribiremos para esta parte del desarrollo).
+
+
 
 ***
