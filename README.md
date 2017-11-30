@@ -87,3 +87,13 @@ docker pull adrianmorente/practicasiv
 ```
 
 ***
+
+# Quinto hito
+
+1º Decidir arquitectura (si se van a utilizar 15 máquinas virtuales, 12 máquinas virtuales y una base de datos, 7 contenedores y media base de datos... you know).
+2º Decidir SOs (comparar rendimientos con Ubuntu Server, CentOS, etc).
+3º Aprender Ansible o Chef.
+4º Vagrant (automatiza los 3 primeros puntos). Arranca, conecta con el hipervisor, mete la imagen y la aprovisiona. Entra con Ansible, copia las claves pública-privada y empieza a instalar cosas.
+5º Despliegue: se conecta con la VM, copia los últimos ficheros de la aplicación (inclusive configuración), se pone a aarrancar los servicios en la secuencia que quieras y finalmente arranca tu aplicación completa. En Node hay una herramienta llamada ***Flightplan***; en Python, ***Fabric***; en Ruby, ***Capistrano***. Hacen algo como los CMD del Dockerfile pero algo más complejo. Además con `flight start/stop/build` podemos arrancar, parar, construir y reiniciar servicios sin tener que conectarnos por SSH, parar servicios individualmente, reabrirlos, etc.
+
+Los puntos 1,2,3,4 se van a hacer **1 vez**, mientras que gracias a las herramientas del 5, vamos a hacer despliegue continuo más automático; dado que al cambiar una línea de código, ejecutamos una línea de `flightplan` y ***a volar***.
