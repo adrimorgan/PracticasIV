@@ -92,6 +92,10 @@ docker pull adrianmorente/practicasiv
 
 Iremos definiendo de forma consecutiva los pasos a seguir durante un desarrollo *DevOps*, empezando por predefinir perfectamente la arquitectura que utilizaremos (esto es, por ejemplo, elegir los sistemas operativos utilizados en las máquinas virtuales, así como su provisionamiento). A continuación, continuaremos con la gestión automática de la configuración de dichas máquinas, de forma que se despliegue esta configuración a tantas instancias como decidamos en un momento dado. Para finalizar, mecanizaremos ambos puntos automatizándolos en uno solo; acabando por desplegar dicha arquitectura final, con la aplicación funcionando.
 
+***
+
+Una parte importante es la instalación del cliente en terminal de Azure, cuyo proceso podemos seguir [aquí](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest#install-with-apt-package-manager). Mediante esta herramienta gestionaremos la creación de máquinas virtuales en lugar de lidiar con su bonita y liosa interfaz gráfica a través de la web.
+
 #### 1. Arquitectura planteada
 
 Puesto que las funcionalidades de esta aplicación se basan en un servicio web, a través del cual crear, borrar y/o modificar ejercicios Dynasystem para el usuario autenticado; por el momento bastará con una máquina virtual que concentre el servicio de nuestro microservicio API REST así como el servicio de base de datos (en la que almacenar dichos ejercicios).
@@ -135,18 +139,21 @@ La definición del fichero se encuentra en la ruta [provision/ansible.yml](./pro
 
 #### 4. Automatización de los puntos anteriores... ¡Vagrant!
 
+Seguimos el tutorial de Azure con Vagrant [alojado en GitHub](https://github.com/Azure/vagrant-azure). No repetiré los pasos porque sería absurdo, pero simplemente destacaré que los pasos a realizar mediante línea de comandos satisfacen las siguientes directivas:
+
+- Añadir máquina virtual remota en Azure. Esto generará unos datos que utilizaremos más adelante con Vagrant.
+- Utilizamos la plantilla de fichero `Vagrantfile` rellenándolo con los datos obtenidos en el paso anterior.
+- Ahora con Vagrant mediante línea de comandos, especificamos la máquina virtual que será utilizada (que será un IaaS sobre el que se instala Ubuntu vacío, y se configura y provisiona de cero).
+- Instalamos el plugin de Vagrant con Azure y levantamos la máquina especificando el proveedor de destino.
+
+Para terminar, habremos de realizar el aprovisionamiento al final del fichero [`Vagrantfile`](./Vagrantfile). Esto hará referencia a la configuración definida con Ansible previamente.
+
 #### 5. Plan de vuelo... ¡Despegue! Digo, ***¡despliegue!***
 
 
-***
-
-4º Vagrant (automatiza los 3 primeros puntos). Arranca, conecta con el hipervisor, mete la imagen y la aprovisiona. Entra con Ansible, copia las claves pública-privada y empieza a instalar cosas.
-5º Despliegue: se conecta con la VM, copia los últimos ficheros de la aplicación (inclusive configuración), se pone a aarrancar los servicios en la secuencia que quieras y finalmente arranca tu aplicación completa. En Node hay una herramienta llamada ***Flightplan***; en Python, ***Fabric***; en Ruby, ***Capistrano***. Hacen algo como los CMD del Dockerfile pero algo más complejo. Además con `flight start/stop/build` podemos arrancar, parar, construir y reiniciar servicios sin tener que conectarnos por SSH, parar servicios individualmente, reabrirlos, etc.
-
-Los puntos 1,2,3,4 se van a hacer **1 vez**, mientras que gracias a las herramientas del 5, vamos a hacer despliegue continuo más automático; dado que al cambiar una línea de código, ejecutamos una línea de `flightplan` y ***a volar***.
 
 ***
 
 #### Finalmente...
 
-Despliegue final: adrianmorente.cloudapp.com
+Despliegue final: XXXxxxXXXxxxXXX
