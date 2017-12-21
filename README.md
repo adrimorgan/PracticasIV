@@ -90,10 +90,63 @@ docker pull adrianmorente/practicasiv
 
 # Quinto hito
 
-1º Decidir arquitectura (si se van a utilizar 15 máquinas virtuales, 12 máquinas virtuales y una base de datos, 7 contenedores y media base de datos... you know).
-2º Decidir SOs (comparar rendimientos con Ubuntu Server, CentOS, etc).
-3º Aprender Ansible o Chef.
+Iremos definiendo de forma consecutiva los pasos a seguir durante un desarrollo *DevOps*, empezando por predefinir perfectamente la arquitectura que utilizaremos (esto es, por ejemplo, elegir los sistemas operativos utilizados en las máquinas virtuales, así como su provisionamiento). A continuación, continuaremos con la gestión automática de la configuración de dichas máquinas, de forma que se despliegue esta configuración a tantas instancias como decidamos en un momento dado. Para finalizar, mecanizaremos ambos puntos automatizándolos en uno solo; acabando por desplegar dicha arquitectura final, con la aplicación funcionando.
+
+#### 1. Arquitectura planteada
+
+Puesto que las funcionalidades de esta aplicación se basan en un servicio web, a través del cual crear, borrar y/o modificar ejercicios Dynasystem para el usuario autenticado; por el momento bastará con una máquina virtual que concentre el servicio de nuestro microservicio API REST así como el servicio de base de datos (en la que almacenar dichos ejercicios).
+
+La implementación futura (desde aquí hasta la presentación del proyecto, y con vistas al TFG) será una infraestructura en la que cada máquina virtual concentre los diversos módulos del microservicio separados en **diferentes contenedores Docker**. Es decir, en cada instancia virtual de una máquina, podrán desplegarse diferentes instancias del servidor web y/o del servidor de bases de datos. Esto permite flexibilidad. Podríamos tener sobre la misma máquina tres instancias de servicio web y solo una de base de datos; y *"en un apuro"*, levantar otra máquina virtual con una instancia adicional de base de datos para satisfacer algún aluvión de consultas y/o solicitudes.
+
+Sin embargo, para este caso práctico, y de forma temporal hasta la presentación, cada máquina virtual contendrá un solo contenedor con la aplicación clonada del repositorio.
+
+Sobre esta máquina, podremos fácilmente instalar Docker para simplemente descargarse desde *DockerHub* la aplicación. Esta imagen de aplicación se actualiza automáticamente en DockerHub con cada `push` exitoso al repositorio en GitHub (este éxito depende de los tests para su integración continua con `TravisCI`).
+
+#### 2. Sistemas operativos utilizados
+
+Existe un grandísimo número de sistemas operativos que podríamos utilizar para un servidor, pero tanto por facilidad de uso como por experiencia, así como por la familiaridad con su gestor de paquetes, **optaré por Ubuntu Server**. Existen otras alternativas punteras como OpenSUSE o CentOS, pero me son menos convencionales, **lo que no les resta profesionalidad**, pero tras haber leído opiniones y visto algunas estadísticas, no existe un líder claro, así que optaré por el más familiar.
+
+En Ubuntu Server podremos instalar Docker fácilmente para satisfacer las necesidades vistas en el apartado anterior.
+
+#### 3. Administración de infraestructuras - ¿Chef vs Ansible?
+
+Ambas herramientas son excelentes en automatización de tareas, despliegue simultáneo de servicios y aplicaciones en varios servidores y/o provisionamiento de éstos. Chef, al igual que Puppet, se trata de una herramienta más antigua (2009) lo que le confiere una más completa documentación además de, según he leído, una mayor estabilidad para su uso en empresas y entornos similares. Por otro lado, Ansible es un *"recién llegado al juego"* (2012) y pese a tener una documentación más pobre, parece ser una herramienta más ligera y con mayor facilidad para un desarrollador que se inicia en la materia.
+
+Además, Chef obliga al usuario a utilizar Ruby, mientras que Ansible utiliza Python. Ruby no está presente en todas las distribuciones de Linux mientras que Python, sí. En este caso, optaré por utilizar Ansible.
+
+***
+
+En cuanto al provisionamiento con Ansible, en un procedimiento normal deberían cumplirse las siguientes directivas:
+
+- Actualización de los repositorios presentes en la máquina virtual.
+- Si procede, instalación del lenguaje de programación utilizado en la aplicación. Lenguajes como `Python` ya figuran en las distribuciones de Linux. Como en este caso se usa `NodeJS`, habrá que ordenar su instalación.
+- Instalación de un gestor de paquetes, también si procede. Por ejemplo, con `Python` se utiliza `pip`; mientras que con `NodeJS`, `npm`. Deberán instalarse conjuntamente.
+- Clonado del repositorio en GitHub o donde se encuentre el código.
+
+***
+
+Sin embargo... Ya controlábamos la integración del repositorio y su despliegue automático en forma de imagen de DockerHub. Además, en el fichero `Dockerfile` que genera dicha imagen ya controlamos la instalación de `NodeJS` y `npm`; por lo que han de instalarse en el contenedor y no sobre el sistema operativo anfitrión de la máquina virtual. Es decir, la configuración que deberá realizar Ansible será más simple:
+
+- Actualización de los repositorios presentes en la máquina virtual.
+- Instalación de Docker.
+- Clonado de la imagen de aplicación de DockerHub con `$ docker pull adrianmorente/practicasiv`.
+
+La definición del fichero se encuentra en la ruta [provision/ansible.yml](./provision/ansible.yml).
+
+#### 4. Automatización de los puntos anteriores... ¡Vagrant!
+
+#### 5. Plan de vuelo... ¡Despegue! Digo, ***¡despliegue!***
+
+
+***
+
 4º Vagrant (automatiza los 3 primeros puntos). Arranca, conecta con el hipervisor, mete la imagen y la aprovisiona. Entra con Ansible, copia las claves pública-privada y empieza a instalar cosas.
 5º Despliegue: se conecta con la VM, copia los últimos ficheros de la aplicación (inclusive configuración), se pone a aarrancar los servicios en la secuencia que quieras y finalmente arranca tu aplicación completa. En Node hay una herramienta llamada ***Flightplan***; en Python, ***Fabric***; en Ruby, ***Capistrano***. Hacen algo como los CMD del Dockerfile pero algo más complejo. Además con `flight start/stop/build` podemos arrancar, parar, construir y reiniciar servicios sin tener que conectarnos por SSH, parar servicios individualmente, reabrirlos, etc.
 
 Los puntos 1,2,3,4 se van a hacer **1 vez**, mientras que gracias a las herramientas del 5, vamos a hacer despliegue continuo más automático; dado que al cambiar una línea de código, ejecutamos una línea de `flightplan` y ***a volar***.
+
+***
+
+#### Finalmente...
+
+Despliegue final: adrianmorente.cloudapp.com
