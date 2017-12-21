@@ -1,0 +1,12 @@
+---
+  - hosts: azure
+
+    tasks:
+      - name: Actualizar lista de repositorios e instalar Docker
+        apt:
+          name: docker
+          update_cache: yes
+
+      - name: Clonado de imagen de DockerHub (adrianmorente/practicasiv)
+        docker_image:
+          name: adrianmorente/practicasiv
