@@ -3,9 +3,9 @@
 node_modules/*
 docs/*
 
-# Vagrant #
-###########
-
+# Own #
+#######
+provision/ansible.retry
 .vagrant/*
 
 # Compiled source #
