@@ -61,7 +61,7 @@ app.put('/exercise/:type/:concentric_strength/:eccentric_strength/:initial_sense
 
 if(!module.parent){
   app.listen(port);
-  console.log('Server running at http://127.0.0.1:' + port + '/');
+  console.log('Server running at:' + port + '/');
 }
 
 module.exports = app;
