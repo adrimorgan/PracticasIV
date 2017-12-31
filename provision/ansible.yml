@@ -1,13 +1,14 @@
----
-  - hosts: all
+# Actualiza repositorios, instala Docker, y descarga siempre la última imagen de DockerHub
 
-    tasks:
-      - name: Actualizar lista de repositorios e instalar Docker
-        become: true
-        apt:
-          name: docker
-          update_cache: yes
+- name: Actualizar repos, instalar Docker
+  become: true
+  apt:
+    name: docker
+    update_cache: yes
 
-      - name: Clonado de imagen de DockerHub (adrianmorente/practicasiv)
-        become: true
-        command: docker pull adrianmorente/practicasiv
+- name: Pull image (adrianmorente/practicasiv)
+  docker:
+    name: practicasiv
+    image: adrianmorente/practicasiv
+    state: reloaded
+    pull: always
