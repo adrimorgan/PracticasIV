@@ -5,7 +5,7 @@
     - name: Actualizar repos, instalar NodeJS
       become: true
       apt:
-        name: nodejs
+        name: nodejs-legacy
         update_cache: yes
 
     - name: Instalar npm
