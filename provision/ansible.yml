@@ -1,14 +1,23 @@
-# Actualiza repositorios, instala Docker, y descarga siempre la última imagen de DockerHub
+---
+  - hosts: all
 
-- name: Actualizar repos, instalar Docker
-  become: true
-  apt:
-    name: docker
-    update_cache: yes
+    tasks:
+    - name: Actualizar repos, instalar NodeJS
+      become: true
+      apt:
+        name: nodejs
+        update_cache: yes
 
-- name: Pull image (adrianmorente/practicasiv)
-  docker:
-    name: practicasiv
-    image: adrianmorente/practicasiv
-    state: reloaded
-    pull: always
+    - name: Instalar npm
+      become: true
+      apt:
+        name: npm
+
+    - name: Instalar PM2 (nodejs process manager)
+      become: true
+      npm:
+        name: pm2
+        global: yes
+
+    - name: Clonar repositorio (adrianmorente/practicasiv)
+      git: repo=https://github.com/adrianmorente/PracticasIV/ dest=~/PracticasIV clone=yes force=yes
