@@ -124,6 +124,7 @@ En cuanto al provisionamiento con Ansible, en un procedimiento normal deberían 
 - Actualización de los repositorios presentes en la máquina virtual.
 - Si procede, instalación del lenguaje de programación utilizado en la aplicación. Lenguajes como `Python` ya figuran en las distribuciones de Linux. Como en este caso se usa `NodeJS`, habrá que ordenar su instalación.
 - Instalación de un gestor de paquetes, también si procede. Por ejemplo, con `Python` se utiliza `pip`; mientras que con `NodeJS`, `npm`. Deberán instalarse conjuntamente.
+- Podemos utilizar también para NodeJS un gestor de procesos como `pm2`, que permite lanzar y monitorizar cómodamente estos diferentes programas de nuestra máquina virtual.
 - Clonado del repositorio en GitHub o donde se encuentre el código.
 
 ***
@@ -133,6 +134,8 @@ Sin embargo... Ya controlábamos la integración del repositorio y su despliegue
 - Actualización de los repositorios presentes en la máquina virtual.
 - Instalación de Docker.
 - Clonado de la imagen de aplicación de DockerHub con `$ docker pull adrianmorente/practicasiv`.
+
+Sin embargo, por problemas de instalación y ejecución con Docker en la máquina virtual, no he conseguido realizar esto así que me limitaré a los pasos descritos en la enumeración anterior a esta última.
 
 La definición del fichero se encuentra en la ruta [provision/ansible.yml](./provision/ansible.yml).
 
@@ -149,10 +152,21 @@ Para terminar, habremos de realizar el aprovisionamiento al final del fichero [`
 
 #### 5. Plan de vuelo... ¡Despegue! Digo, ***¡despliegue!***
 
+Tras provisionar la máquina con Vagrant, podemos utilizar `flightplan.js` para lanzar la ejecución de la aplicación en la máquina virtual especificada. La configuración se encuentra en [despliegue/flightplan.js](despliegue/flightplan.js).
 
+Básicamente, su código configura para una máquina en desarrollo `(staging)` o en producción `(production)` la máquina virtual a utilizar; especificando el nombre de dominio (o `DNS Label Prefix`, como dice Vagrant), el usuario y el modo de agente (SSH, por ejemplo).
+
+Además, permite ejecutar comandos en local y/o en remoto, para instalar los paquetes con `npm` (para lo que lo uso en mi caso) y para lanzar la aplicación con el gestor `pm2` antes mencionado.
+
+También permite mostrar mensajes de *log* que informen sobre el estado de la máquina y el despliegue.
+
+### Proceso de ejecución
+
+1. Clonado del repo: `git clone https://github.com/adrianmorente/PracticasIV`.
+2. Provisionar la máquina con Vagrant: `vagrant up --provider=azure`.
+3. Si cambian la IP y/o el DNS, modificar el dominio en el archivo `flightplan.js`.
+4. Desplegar con `fly staging` dentro del directorio `./despliegue`.
+
+Despliegue final: 40.118.214.208
 
 ***
-
-#### Finalmente...
-
-Despliegue final: XXXxxxXXXxxxXXX
