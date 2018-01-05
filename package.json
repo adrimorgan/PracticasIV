@@ -29,6 +29,7 @@
     "assert": "^1.4.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "flightplan": "^0.6.17",
     "grunt-cli": "^1.2.0",
     "supertest": "^3.0.0"
   }
