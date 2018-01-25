@@ -18,8 +18,6 @@ Descripción del proyecto a realizar.
 
 Este proyecto versa sobre la creación y predefinición en el servidor de una serie de ejercicios preconfigurados sobre el dispositivo. Con este microservicio, Dynasystem será capaz de almacenar ejercicios predefinidos personalmente por cada usuario, eliminarlos, consultarlos o simplemente añadirlos a la rutina correspondiente.
 
-*[Este microservicio será uno de los integrantes de la aplicación final, que será mi Trabajo de Fin de Grado.]*
-
 #### Servicios y tecnologías usados
 
 + Pila **MEAN** (MongoDB, Express, Angular y NodeJS).
