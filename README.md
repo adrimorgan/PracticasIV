@@ -2,9 +2,8 @@
 [![Coverage Status](https://coveralls.io/repos/adrianmorente/PracticasIV/badge.svg?branch=master)](https://coveralls.io/r/adrianmorente/PracticasIV?branch=master)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)
 [![GitHub language count](https://img.shields.io/github/languages/count/badges/shields.svg?style=flat-square)]()
-
+[![Neglect](https://img.shields.io/badge/neglect-200%25-red.svg?style=flat-square)](https://github.com/adrianmorente/PracticasIV)
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
-[![Neglect](https://img.shields.io/badge/neglect-200%25-red.svg?style=for-the-badge)](https://github.com/adrianmorente/PracticasIV)
 
 # Ejercicios DYNAsystem
 
