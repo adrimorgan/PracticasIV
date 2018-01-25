@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/adrianmorente/PracticasIV.svg?branch=master)](https://travis-ci.org/adrianmorente/PracticasIV)
 
+[![Coverage Status](https://coveralls.io/repos/adrianmorente/PracticasIV/badge.svg?branch=master)](https://coveralls.io/r/adrianmorente/PracticasIV?branch=master)
+
 Repositorio dedicado a la recolección de los ejercicios realizados a lo largo de la asignatura, así como del proyecto final realizado, descrito más adelante.
 
 ***
