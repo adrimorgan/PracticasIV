@@ -2,6 +2,7 @@
 [![Coverage Status](https://coveralls.io/repos/adrianmorente/PracticasIV/badge.svg?branch=master)](https://coveralls.io/r/adrianmorente/PracticasIV?branch=master)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)
 [![Neglect](https://img.shields.io/badge/neglect-200%25-red.svg?style=flat-square)](https://github.com/adrianmorente/PracticasIV)
+[![GitHub language count](https://img.shields.io/github/languages/count/badges/shields.svg?style=flat-square)]()
 
 # Ejercicios DYNAsystem
 
