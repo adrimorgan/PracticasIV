@@ -1,8 +1,10 @@
-## PracticasIV
-
 [![Build Status](https://travis-ci.org/adrianmorente/PracticasIV.svg?branch=master)](https://travis-ci.org/adrianmorente/PracticasIV)
 [![Coverage Status](https://coveralls.io/repos/adrianmorente/PracticasIV/badge.svg?branch=master)](https://coveralls.io/r/adrianmorente/PracticasIV?branch=master)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+# Ejercicios DYNAsystem
+
+## PracticasIV
 
 Repositorio dedicado a la recolección de los ejercicios realizados a lo largo de la asignatura, así como del proyecto final realizado, descrito más adelante.
 
@@ -12,7 +14,7 @@ Repositorio dedicado a la recolección de los ejercicios realizados a lo largo d
 
 Descripción del proyecto a realizar.
 
-## Dynasystem exercises
+## Ejercicios Dynasystem
 
 [Dynasystem](https://www.dynasystem.es/) es un dispositivo revolucionario que persigue el máximo rendimiento deportivo además de un control clínico para el deportista. Se trata de un centro de alto rendimiento que reúne las máquinas de entrenamiento más exitosas del mercado, permitiendo integrar el dispositivo en cualquier ambiente. Además de *all in one*, Dynasystem recopila datos del entrenamiento en tiempo real y los muestra en pantalla, permitiendo al deportista o al especialista clínico orientarse con el tratamiento, así como perfeccionar el rendimiento al máximo nivel.
 
