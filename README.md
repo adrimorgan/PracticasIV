@@ -19,13 +19,13 @@ Descripción del proyecto a realizar.
 
 ## Ejercicios Dynasystem
 
-[Dynasystem](https://www.dynasystem.es/) es un dispositivo revolucionario que persigue el máximo rendimiento deportivo además de un control clínico para el deportista. Se trata de un centro de alto rendimiento que reúne las máquinas de entrenamiento más exitosas del mercado, permitiendo integrar el dispositivo en cualquier ambiente. Además de *all in one*, Dynasystem recopila datos del entrenamiento en tiempo real y los muestra en pantalla, permitiendo al deportista o al especialista clínico orientarse con el tratamiento, así como perfeccionar el rendimiento al máximo nivel.
+[Dynasystem](https://www.dynasystem.es/) es un dispositivo revolucionario que persigue el máximo rendimiento deportivo además de un control clínico para el deportista o paciente. Se trata de un centro de alto rendimiento que reúne los modos de las máquinas de entrenamiento más exitosas del mercado, permitiendo integrar el dispositivo en cualquier ambiente. Además de *all in one*, Dynasystem recopila datos del entrenamiento en tiempo real y los muestra en pantalla, permitiendo al deportista o al especialista clínico orientarse con el tratamiento, así como perfeccionar el rendimiento al máximo nivel. Además de mostrarlos, permite extraer los informes con dichos datos en forma de `.pdf` o alojarlos en formato `JSON` a través del servidor (implementado por un futuro microservicio como éste).
 
 Este proyecto versa sobre la creación y predefinición en el servidor de una serie de ejercicios preconfigurados sobre el dispositivo. Con este microservicio, Dynasystem será capaz de almacenar ejercicios predefinidos personalmente por cada usuario, eliminarlos, consultarlos o simplemente añadirlos a la rutina correspondiente.
 
 #### Servicios y tecnologías usados
 
-+ Pila **MEAN** (MongoDB, Express, Angular y NodeJS).
++ Pila **MEAN** (MongoDB, Express, ~~Angular~~ y NodeJS).
 + Zeit.co y/o contenedores de **Azure** para pruebas y despliegue.
 + Integración continua con *TravisCI*.
 
