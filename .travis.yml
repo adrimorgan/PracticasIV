@@ -2,8 +2,5 @@ language: node_js
 node_js:
  - "node"
  - "lts/*"
-before_install:
-  - npm install -g mocha
-  - npm install
-script:
-  - npm test
+ - "iojs"
+after_success: 'npm run coveralls'
