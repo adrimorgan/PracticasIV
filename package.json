@@ -34,6 +34,7 @@
     "flightplan": "^0.6.17",
     "grunt-cli": "^1.2.0",
     "istanbul": "^0.4.5",
+    "mongodb": "^3.0.1",
     "supertest": "^3.0.0"
   }
 }
